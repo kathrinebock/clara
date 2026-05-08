@@ -1,0 +1,18 @@
+{
+  "source": [
+    "tokens/src/PRIMITIVES/**/*.json",
+    "tokens/src/SEMNATIC TOKENS/**/*.json"
+  ],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "tokens/dist/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables"
+        }
+      ]
+    }
+  }
+}

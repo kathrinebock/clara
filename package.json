@@ -1,0 +1,24 @@
+{
+  "name": "clara",
+  "version": "1.0.0",
+  "description": "Clara — OK's design system. Design tokens and Web Components built from Figma.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laerkelange/clara.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/laerkelange/clara/issues"
+  },
+  "homepage": "https://github.com/laerkelange/clara#readme",
+  "devDependencies": {
+    "style-dictionary": "^5.4.0"
+  }
+}
