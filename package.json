@@ -1,12 +1,12 @@
 {
   "name": "clara-design-tokens-mcp",
   "version": "1.0.0",
-  "description": "Clara — OK's design system. Design tokens MCP server.",
-  "main": "server.js",
+  "description": "Clara — OK's design system. Design tokens MCP / REST server.",
+  "main": "server/server.js",
   "type": "commonjs",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
+    "dev": "node server/server.js",
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
