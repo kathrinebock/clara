@@ -656,6 +656,9 @@
   <div class="intro">
     <p>These are live examples of all Clara components. Click any code snippet to copy it to your clipboard.</p>
     <div class="hint">💡 <strong>Pro tip:</strong> All components use semantic tokens. Never use primitive tokens (<code>--color-red-800</code>) or hardcoded colors (<code>#460019</code>) in your code.</div>
+    <div class="hint" style="border-left-color: var(--color-feedback-info-bold); background: var(--color-backgrounds-subdued);">
+      <strong>✨ Design polish:</strong> Cards use elevation, generous spacing creates rhythm, colors create hierarchy. This makes prototypes look professional, not like wireframes.
+    </div>
   </div>
 
   <!-- Button Component -->
@@ -949,6 +952,227 @@
   <div style="text-align: center; padding: var(--spacing-3xl) 0; color: var(--color-content-subtle); font-size: 14px;">
     <p>Clara Design System — Component Examples</p>
     <p>👉 Click any code snippet to copy it</p>
+  </div>
+
+  <!-- Polished Example Patterns -->
+  <div class="section">
+    <h2>Polished Design Patterns</h2>
+    <p>These examples show how to build professional-looking components with elevation, spacing, and color hierarchy.</p>
+
+    <h3>Product Card (with elevation & spacing)</h3>
+    <div class="component-demo">
+      <div class="component-demo__example">
+        <div style="background: var(--color-backgrounds-elevated); 
+                    border: 1px solid var(--color-border-subtle); 
+                    border-radius: var(--corner-radius-card);
+                    box-shadow: var(--elevation-sm);
+                    padding: var(--spacing-lg);
+                    max-width: 400px;">
+          <div style="background: var(--color-backgrounds-subdued); 
+                      border-radius: 8px; 
+                      height: 200px; 
+                      margin-bottom: var(--spacing-lg);
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: var(--color-content-subtle);">
+            [Image placeholder]
+          </div>
+          <h3 style="margin: 0 0 var(--spacing-sm) 0; 
+                     color: var(--color-content-display);
+                     font-size: 24px;">
+            Premium Plan
+          </h3>
+          <p style="margin: 0 0 var(--spacing-md) 0; 
+                    color: var(--color-content-subtle);
+                    font-size: 16px;
+                    line-height: 1.6;">
+            Everything you need to scale your business with advanced features and priority support.
+          </p>
+          <div style="margin: var(--spacing-lg) 0; 
+                      padding-top: var(--spacing-md);
+                      border-top: 1px solid var(--color-border-subtle);">
+            <p style="margin: 0 0 var(--spacing-md) 0; 
+                      color: var(--color-content-default);
+                      font-weight: 600;
+                      font-size: 20px;">
+              $99/month
+            </p>
+          </div>
+          <button class="clara-button clara-button--primary clara-button--large" style="width: 100%; margin-bottom: var(--spacing-sm);">
+            Start Free Trial
+          </button>
+          <button class="clara-button clara-button--secondary clara-button--large" style="width: 100%;">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <span class="code-snippet-label">Key techniques</span>
+      <div class="code-snippet">• Uses --elevation-sm for depth
+• var(--spacing-lg) for card padding
+• Color hierarchy: display color for title, subtle for description
+• Generous spacing between elements creates visual rhythm
+• Border separates pricing section</div>
+    </div>
+
+    <h3>Form Group (with spacing hierarchy)</h3>
+    <div class="component-demo">
+      <div class="component-demo__example">
+        <div style="background: var(--color-backgrounds-elevated); 
+                    border: 1px solid var(--color-border-subtle); 
+                    border-radius: var(--corner-radius-card);
+                    padding: var(--spacing-lg);
+                    max-width: 500px;">
+          <h2 style="margin: 0 0 var(--spacing-lg) 0; 
+                     color: var(--color-content-display);">
+            Create Account
+          </h2>
+          
+          <div style="margin-bottom: var(--spacing-md);">
+            <div class="clara-input">
+              <label class="clara-input__label">Email address</label>
+              <input class="clara-input__field" type="email" placeholder="name@example.com">
+              <span class="clara-input__helper">We'll never share your email</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-md);">
+            <div class="clara-input">
+              <label class="clara-input__label">Password</label>
+              <input class="clara-input__field" type="password">
+              <span class="clara-input__helper">At least 8 characters</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--spacing-lg);">
+            <label class="clara-checkbox">
+              <input type="checkbox" class="clara-checkbox__input" checked>
+              <span class="clara-checkbox__label">I agree to the terms</span>
+            </label>
+          </div>
+
+          <button class="clara-button clara-button--primary clara-button--large" style="width: 100%;">
+            Create Account
+          </button>
+
+          <p style="text-align: center; 
+                    color: var(--color-content-subtle);
+                    margin: var(--spacing-lg) 0 0 0;
+                    font-size: 14px;">
+            Already have an account? <a href="#" style="color: var(--color-actions-link-default); text-decoration: none;">Sign in</a>
+          </p>
+        </div>
+      </div>
+      <span class="code-snippet-label">Key techniques</span>
+      <div class="code-snippet">• Card elevation for emphasis
+• var(--spacing-lg) inside the card, var(--spacing-md) between fields
+• Generous padding creates breathing room
+• Color hierarchy: bold title, subtle helper text, link for secondary action</div>
+    </div>
+
+    <h3>Status Message (with color feedback)</h3>
+    <div class="grid">
+      <div class="component-demo">
+        <div class="component-demo__title">Success</div>
+        <div class="component-demo__example">
+          <div style="background: var(--color-feedback-success-subtle);
+                      border-left: 4px solid var(--color-feedback-success-bold);
+                      padding: var(--spacing-md);
+                      border-radius: 4px;">
+            <div style="color: var(--color-feedback-success-bold); 
+                        font-weight: 600;
+                        margin-bottom: 4px;">
+              ✓ Success
+            </div>
+            <div style="color: var(--color-content-default);
+                        font-size: 14px;">
+              Your payment has been processed successfully
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-demo">
+        <div class="component-demo__title">Error</div>
+        <div class="component-demo__example">
+          <div style="background: var(--color-feedback-error-subtle);
+                      border-left: 4px solid var(--color-feedback-error-bold);
+                      padding: var(--spacing-md);
+                      border-radius: 4px;">
+            <div style="color: var(--color-feedback-error-bold); 
+                        font-weight: 600;
+                        margin-bottom: 4px;">
+              ✗ Error
+            </div>
+            <div style="color: var(--color-content-default);
+                        font-size: 14px;">
+              Please check your email and try again
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-demo">
+        <div class="component-demo__title">Warning</div>
+        <div class="component-demo__example">
+          <div style="background: var(--color-feedback-warning-subtle);
+                      border-left: 4px solid var(--color-feedback-warning-bold);
+                      padding: var(--spacing-md);
+                      border-radius: 4px;">
+            <div style="color: var(--color-content-default); 
+                        font-weight: 600;
+                        margin-bottom: 4px;">
+              ⚠ Warning
+            </div>
+            <div style="color: var(--color-content-default);
+                        font-size: 14px;">
+              This action cannot be undone
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Empty State (with illustration placeholder)</h3>
+    <div class="component-demo">
+      <div class="component-demo__example">
+        <div style="background: var(--color-backgrounds-elevated); 
+                    border: 1px solid var(--color-border-subtle); 
+                    border-radius: var(--corner-radius-card);
+                    padding: var(--spacing-3xl) var(--spacing-lg);
+                    text-align: center;
+                    max-width: 500px;
+                    margin: 0 auto;">
+          <div style="background: var(--color-backgrounds-subdued);
+                      border-radius: 8px;
+                      height: 150px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: var(--color-content-subtle);
+                      margin-bottom: var(--spacing-lg);
+                      font-size: 48px;">
+            📭
+          </div>
+          <h3 style="margin: 0 0 var(--spacing-md) 0; 
+                     color: var(--color-content-default);">
+            No results found
+          </h3>
+          <p style="margin: 0 0 var(--spacing-lg) 0; 
+                    color: var(--color-content-subtle);">
+            Try adjusting your filters or search terms to find what you're looking for.
+          </p>
+          <button class="clara-button clara-button--primary clara-button--small">
+            Clear Filters
+          </button>
+        </div>
+      </div>
+      <span class="code-snippet-label">Key techniques</span>
+      <div class="code-snippet">• Large illustration/emoji placeholder
+• Centered layout with generous padding
+• Clear hierarchy: title, description, CTA
+• Colors guide user to action</div>
+    </div>
   </div>
 
   <script>
