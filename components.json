@@ -1,0 +1,259 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-05-12",
+  "framework": "HTML/CSS",
+  "description": "Clara design system components — documented and ready to use",
+  "components": [
+    {
+      "name": "Button",
+      "class": "clara-button",
+      "status": "ready",
+      "description": "Interactive button for primary and secondary actions",
+      "variants": {
+        "variant": ["primary", "secondary"],
+        "size": ["small", "large"],
+        "state": ["default", "hover", "active", "focus", "disabled"]
+      },
+      "classModifiers": {
+        "variant": "--primary, --secondary",
+        "size": "--small, --large",
+        "state": "disabled HTML attribute"
+      },
+      "subclasses": [],
+      "css": "Defined in CLARA.md",
+      "html": "Documented in CLARA.md",
+      "usage": "Use primary for the most important action on a page. Use secondary for supporting actions.",
+      "rules": [
+        "Never create layout variations (e.g., full-width) unless specified",
+        "States: use disabled attribute, not .disabled class",
+        "Hover and pressed states use overlay tokens"
+      ]
+    },
+    {
+      "name": "Input",
+      "class": "clara-input",
+      "status": "ready",
+      "description": "Text input field with label and optional helper text",
+      "variants": {
+        "state": ["default", "focus", "hover", "error", "disabled"]
+      },
+      "classModifiers": {
+        "container": "--error, --disabled",
+        "field": "HTML input element with disabled attribute"
+      },
+      "subclasses": {
+        "label": "clara-input__label",
+        "field": "clara-input__field",
+        "helper": "clara-input__helper"
+      },
+      "css": "Defined in CLARA.md",
+      "html": "Documented in CLARA.md",
+      "usage": "Always include a label. Only use placeholder when it helps understand format (e.g., phone number). Helper text is guidance-only.",
+      "rules": [
+        "Never use placeholder as a substitute for label",
+        "Helper text only shown when needed",
+        "Icons for secondary actions or status only — never decorative",
+        "Never add placeholder text unless component spec explicitly shows one"
+      ]
+    },
+    {
+      "name": "Checkbox",
+      "class": "clara-checkbox",
+      "status": "ready",
+      "description": "Checkbox input with inline label",
+      "variants": {
+        "state": ["unchecked", "checked", "disabled"],
+        "focus": ["default", "focus"]
+      },
+      "classModifiers": {
+        "container": "--disabled",
+        "input": "HTML checked and disabled attributes"
+      },
+      "subclasses": {
+        "input": "clara-checkbox__input",
+        "label": "clara-checkbox__label"
+      },
+      "css": "Defined in CLARA.md",
+      "html": "Documented in CLARA.md",
+      "usage": "Always include a label. Touch target is 12px padding around entire checkbox.",
+      "rules": [
+        "Label is required — never a label-less checkbox",
+        "Touch target minimum 12px padding — never reduce clickable area"
+      ]
+    },
+    {
+      "name": "Radio button",
+      "class": "clara-radio",
+      "status": "ready",
+      "description": "Radio button input with inline label",
+      "variants": {
+        "state": ["unselected", "selected", "disabled"],
+        "focus": ["default", "focus"]
+      },
+      "classModifiers": {
+        "container": "--disabled",
+        "input": "HTML checked and disabled attributes"
+      },
+      "subclasses": {
+        "input": "clara-radio__input",
+        "label": "clara-radio__label"
+      },
+      "css": "Defined in CLARA.md",
+      "html": "Documented in CLARA.md",
+      "usage": "Use for mutually exclusive choices. Always use radio groups (shared name attribute).",
+      "rules": [
+        "All radios in a group must share the same name attribute",
+        "Label is required for each radio button"
+      ]
+    },
+    {
+      "name": "Option tile",
+      "class": "clara-option-tile",
+      "status": "ready",
+      "description": "Large clickable tile for option selection",
+      "variants": {
+        "state": ["unselected", "selected", "disabled"],
+        "focus": ["default", "focus"]
+      },
+      "classModifiers": {
+        "container": "--disabled",
+        "input": "HTML checked and disabled attributes"
+      },
+      "subclasses": {
+        "input": "clara-option-tile__input",
+        "label": "clara-option-tile__label"
+      },
+      "css": "Defined in CLARA.md",
+      "html": "Documented in CLARA.md",
+      "usage": "Use for prominent option selection when visual prominence helps the user. Not required for every form.",
+      "rules": [
+        "Can be used with radio or checkbox input type",
+        "Larger touch target than radio/checkbox"
+      ]
+    },
+    {
+      "name": "Switch",
+      "class": "clara-switch",
+      "status": "ready",
+      "description": "Toggle switch for on/off states",
+      "variants": {
+        "state": ["off", "on", "disabled"],
+        "focus": ["default", "focus"]
+      },
+      "classModifiers": {
+        "container": "--disabled",
+        "input": "HTML checked and disabled attributes"
+      },
+      "subclasses": {
+        "input": "clara-switch__input",
+        "label": "clara-switch__label"
+      },
+      "css": "Defined in CLARA.md",
+      "html": "Documented in CLARA.md",
+      "usage": "Use for immediate on/off toggles. Include a label describing what the switch controls.",
+      "rules": [
+        "Must have descriptive label",
+        "Use for boolean states only — not for selecting between options"
+      ]
+    }
+  ],
+  "componentCreationRules": {
+    "description": "When a component doesn't exist in Clara, you may invent one following these rules:",
+    "rules": [
+      "Use ONLY OK's semantic color tokens — never primitives or hardcoded colors",
+      "Use ONLY OK family (H1/H2) and Fellix (body/labels/buttons) — never other fonts",
+      "Follow OK's visual language — never deviate from the design system",
+      "Document the component clearly with HTML and CSS so future AIs can reuse it",
+      "Use consistent BEM naming: .clara-component, .clara-component__element, .clara-component--modifier"
+    ]
+  },
+  "tokenLayers": {
+    "primitives": {
+      "path": "tokens/primitives/",
+      "description": "Base values — red.600, grey.100, space.md, etc.",
+      "usage": "NEVER use directly in components",
+      "example": "--color-red-600 (primitive — forbidden in components)"
+    },
+    "semantic": {
+      "path": "tokens/semantic/",
+      "description": "Named by purpose — color-actions-button-primary-background, spacing-md, etc.",
+      "usage": "ALWAYS use these in components",
+      "example": "--color-actions-button-primary-background (semantic — use this)"
+    }
+  },
+  "restApi": {
+    "baseUrl": "https://clara-tokens.railway.app (production) or http://localhost:3000 (local)",
+    "endpoints": [
+      {
+        "path": "/health",
+        "method": "GET",
+        "description": "Health check"
+      },
+      {
+        "path": "/tokens/all",
+        "method": "GET",
+        "description": "All design tokens"
+      },
+      {
+        "path": "/tokens/colors/primitives",
+        "method": "GET",
+        "description": "Primitive color palettes"
+      },
+      {
+        "path": "/tokens/colors/semantic",
+        "method": "GET",
+        "description": "Semantic color tokens"
+      },
+      {
+        "path": "/tokens/colors/{path}",
+        "method": "GET",
+        "description": "Get color by dot-path (e.g., primitives.red.600)"
+      },
+      {
+        "path": "/tokens/text-styles",
+        "method": "GET",
+        "description": "All typography styles"
+      },
+      {
+        "path": "/tokens/spacing",
+        "method": "GET",
+        "description": "Spacing scale"
+      },
+      {
+        "path": "/tokens/fonts",
+        "method": "GET",
+        "description": "Font families"
+      },
+      {
+        "path": "/tokens/css",
+        "method": "GET",
+        "description": "Generate all CSS custom properties"
+      }
+    ]
+  },
+  "fonts": {
+    "okFamily": {
+      "name": "OK family",
+      "weights": [600, 700],
+      "use": "H1 (700), H2 (600)",
+      "url": "https://cdn.ok.dk/wok/fonts/ok-family/",
+      "files": ["okfamily-bold.woff2", "okfamily-semibold.woff2"]
+    },
+    "fellix": {
+      "name": "Fellix",
+      "weights": [400, 500, 600],
+      "use": "H3, H4, body, labels, buttons",
+      "url": "https://cdn.ok.dk/wok/fonts/fellix/",
+      "files": [
+        "Fellix-Regular.woff2",
+        "Fellix-Medium.woff2",
+        "Fellix-SemiBold.woff2"
+      ]
+    }
+  },
+  "breaskpoints": {
+    "smartphone": "< 768px",
+    "desktop": ">= 768px",
+    "note": "Headings are responsive — scale up on desktop. Body and UI text stay the same."
+  }
+}
