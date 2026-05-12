@@ -1,7 +1,7 @@
 {
   "source": [
-    "tokens/src/PRIMITIVES/**/*.json",
-    "tokens/src/SEMNATIC TOKENS/**/*.json"
+    "tokens/primitives/**/*.json",
+    "tokens/semantic/**/*.json"
   ],
   "platforms": {
     "css": {
