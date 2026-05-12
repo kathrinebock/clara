@@ -1,27 +1,21 @@
 {
   "name": "clara-design-tokens-mcp",
   "version": "1.0.0",
-  "description": "MCP Server for Clara Design System tokens - exposes colors, typography, spacing, and more",
+  "description": "Clara — OK's design system. Design tokens MCP server.",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
     "dev": "node server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "mcp",
-    "design-tokens",
-    "design-system"
-  ],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "figma": "^0.0.1",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "zod": "^3.23.8"
   }
 }
