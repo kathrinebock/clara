@@ -1,0 +1,28 @@
+# Clara — OK's Design System
+
+> Clara is OK's design system: design tokens, typography, fonts, spacing and component documentation built from Figma. This repository is the canonical source for AI assistants (Claude, Cursor, MCP clients) building UI, pages, forms or prototypes for OK.
+
+## Primary context files
+
+- [CLARA.md](https://raw.githubusercontent.com/kathrinebock/clara/main/CLARA.md): Complete design system context — fonts, primitive + semantic tokens, typography, components, usage rules. Load this before generating any UI.
+- [docs/brand.md](https://raw.githubusercontent.com/kathrinebock/clara/main/docs/brand.md): OK brand voice, tone of voice and the canonical product-name dictionary. Load this before writing copy.
+- [docs/design-system.md](https://raw.githubusercontent.com/kathrinebock/clara/main/docs/design-system.md): Master rules for AI assistants — what to always do, what never to do.
+
+## Tokens (machine-readable)
+
+- [tokens.js](https://raw.githubusercontent.com/kathrinebock/clara/main/tokens.js): All design tokens as a CommonJS module.
+- [tokens/primitives/mode-1.json](https://raw.githubusercontent.com/kathrinebock/clara/main/tokens/primitives/mode-1.json): Primitive tokens (Style Dictionary source).
+- [tokens/semantic/desktop.json](https://raw.githubusercontent.com/kathrinebock/clara/main/tokens/semantic/desktop.json): Semantic tokens for desktop.
+- [tokens/semantic/smartphone.json](https://raw.githubusercontent.com/kathrinebock/clara/main/tokens/semantic/smartphone.json): Semantic tokens for smartphone.
+
+## MCP server
+
+A live MCP / REST server exposes these tokens. See [docs/mcp-server.md](https://github.com/kathrinebock/clara/blob/main/docs/mcp-server.md) for endpoints and Claude Desktop config.
+
+## Hard rules
+
+- Never use primitive tokens directly in components — always use semantic tokens.
+- Never use hardcoded color, font or spacing values — always use the CSS custom properties defined in CLARA.md.
+- Always use OK family for H1/H2 and Fellix for H3, H4, body, labels, buttons.
+- Never write in ALL CAPS.
+- Always use correct product names from docs/brand.md.
