@@ -1,0 +1,21 @@
+{
+  "name": "clara-design-tokens-mcp",
+  "version": "1.0.0",
+  "description": "Clara — OK's design system. Design tokens MCP / REST server.",
+  "main": "server/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server/server.js",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "figma": "^0.0.1",
+    "node-fetch": "^2.7.0",
+    "zod": "^3.23.8"
+  }
+}
