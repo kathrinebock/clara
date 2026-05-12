@@ -7,7 +7,7 @@ Design tokens for Clara, OK's design system. These files are the Style Dictionar
 ```
 tokens/
 ├── primitives/       Base values — do not use directly in components
-│   └── tokens.json   Single mode (light theme baseline)
+│   └── mode1.json   Single mode (light theme baseline)
 └── semantic/         Use these in components — they reference primitives
     ├── desktop.json
     └── smartphone.json
